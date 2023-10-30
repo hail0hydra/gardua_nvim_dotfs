@@ -29,10 +29,10 @@ set winbar=%=%m\ %f
 autocmd BufEnter * highlight Normal guibg=none
 
 " Copy & Paste From System Clipboard
-" vnoremap <leader>y "+y
-" nnoremap <leader>Y "+yg_
-" nnoremap <leader>y "+y
-" nnoremap <leader>yy "+yy
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+yg_
+nnoremap <leader>y "+y
+nnoremap <leader>yy "+yy
 ]])
 
 -- set autoindent
