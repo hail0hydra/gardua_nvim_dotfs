@@ -18,7 +18,11 @@ __1. Basic Options__
 <br>
   - I have set basic options like `tabstop`, `relative number`, etc that you can find [here](lua/options.lua)
 
+  - this also fetches two colorschemes: [catppuccin](https://github.com/catppuccin/nvim) and [material](https://github.com/kaicataldo/material.vim/)
 
+
+<br>
+<br>
 <br>
 <br>
 
@@ -30,7 +34,8 @@ __2. Lazy.nvim__
 
   - The setup file for this plugin is [here](lua/plugin.lua) and the plugins to be installed is mentioned [here](lua/pluginlist.lua).
 
-
+<br>
+<br>
 <br>
 <br>
 
@@ -44,7 +49,8 @@ __3. LSP__
   
    - With LSP, and language servers intalled with [mason](https://github.com/williamboman/mason.nvim), which helps to install language servers, I also used [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) whose setup is [here](after/plugin/cmp.lua).
 
-
+<br>
+<br>
 <br>
 <br>
 
@@ -57,4 +63,13 @@ __4. Telescope__
 
 <br>
 <br>
+<br>
+<br>
+
+## Background
+
+<br>
+<br>
+
+- The background is removed by default. If you want to enjoy your nvim with background, just comment the line 29 [here](lua/options.lua).
 
