@@ -125,7 +125,7 @@ nvim --version
 <br>
 <br>
 
-- Make sure you have [node](https://nodejs.org/en) installed
+- Make sure you have [node](https://nodejs.org/en) and [npm](https://www.npmjs.com/package/npm) installed
 
 <br>
 <br>
