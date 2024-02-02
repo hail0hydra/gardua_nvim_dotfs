@@ -136,7 +136,7 @@ nvim --version
 <br>
 
 ```bash
-cd .config/nvim
+cd ~/.config/nvim
 git clone  "https://github.com/hail0hydra/gardua_nvim_dotfs" .
 ```
 
