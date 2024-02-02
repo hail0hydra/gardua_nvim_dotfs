@@ -3,7 +3,7 @@
 <br>
 <br>
 
-- This repo has my neovim dotfiles for `linux` based environments :smile:
+- This repo has my neovim dotfiles for `linux` and `windows` based environments :smile:
 
 <br>
 <br>
