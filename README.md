@@ -125,6 +125,12 @@ nvim --version
 <br>
 <br>
 
+- Make sure you have [node](https://nodejs.org/en) installed
+
+<br>
+<br>
+
+
 ### Linux
 
 
