@@ -130,6 +130,8 @@ nvim --version
 - ensure presence of [`git`](https://github.com/git-guides/install-git) in the cmd.
 
 
+- [git](https://git-scm.com/downloads) should be installed, 
+
 <br>
 <br>
 
@@ -227,3 +229,21 @@ git clone "https://github.com/hail0hydra/gardua_nvim_dotfs" .
 ```cmd
 nvim
 ```
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+<br>
+
+## Bonus
+
+<br>
+<br>
+
+- To use [Markdown Preview](https://github.com/iamcco/markdown-preview.nvim) you can run `:call mkdp#util#install()` in any file just once.
+
+- This function is already mapped to `<F5>`.
