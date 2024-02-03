@@ -129,6 +129,8 @@ nvim --version
 
 - ensure presence of [`git`](https://github.com/git-guides/install-git) in the cmd.
 
+- Make sure there is [make](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows)
+
 <br>
 <br>
 
