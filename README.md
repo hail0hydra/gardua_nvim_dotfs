@@ -176,8 +176,10 @@ nvim
 
 - Make sure [gcc](https://gcc.gnu.org/install/binaries.html) is installed
 
+- ensure [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#windows) is installed as well
+
   ```
-  scoop install gcc make
+  scoop install gcc make fzf
   ```
 <br>
 <br>
