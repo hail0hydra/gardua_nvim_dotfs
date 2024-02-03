@@ -129,7 +129,6 @@ nvim --version
 
 - ensure presence of [`git`](https://github.com/git-guides/install-git) in the cmd.
 
-- Make sure there is [make](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows)
 
 <br>
 <br>
@@ -170,6 +169,16 @@ nvim
 
 ### Windows
 
+<br>
+<br
+
+- Make sure there is [make](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows)
+
+- Make sure [gcc](https://gcc.gnu.org/install/binaries.html) is installed
+
+  ```
+  scoop install gcc make
+  ```
 <br>
 <br>
 
