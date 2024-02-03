@@ -127,6 +127,8 @@ nvim --version
 
 - Make sure you have [node](https://nodejs.org/en) and [npm](https://www.npmjs.com/package/npm) installed
 
+- ensure presence of [`git`](https://github.com/git-guides/install-git) in the cmd.
+
 <br>
 <br>
 
@@ -193,12 +195,9 @@ cd nvim
 <br>
 <br>
 
-3. ensure presence of [`git`](https://github.com/git-guides/install-git) in the cmd.
 
-<br>
-<br>
 
-4. Clone the github repo.
+3. Clone the github repo.
 
 <br>
 
@@ -208,7 +207,7 @@ git clone "https://github.com/hail0hydra/gardua_nvim_dotfs" .
 <br>
 <br>
 
-5. Run nvim
+4. Run nvim
 
 <br>
 
