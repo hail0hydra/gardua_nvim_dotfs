@@ -9,25 +9,37 @@ This repository contains my Neovim config files for both Linux and Windows-based
 - I have set basic options like `tabstop`, `relative number`, etc., which you can find [here](lua/options.lua).
 - This also includes fetching two color schemes: [catppuccin](https://github.com/catppuccin/nvim) and [material](https://github.com/kaicataldo/material.vim/).
 
+![alt text](2.png)
+
+
 ### 2. Lazy.nvim
 
 - [`Lazy.nvim`](https://github.com/folke/lazy.nvim) is a new plugin manager for Neovim, replacing the now deprecated [`packer`](https://github.com/wbthomason/packer.nvim).
 - The setup file for this plugin is [here](lua/plugin.lua), and the list of plugins to be installed is mentioned [here](lua/pluginlist.lua).
+
+![alt text](4.png)
 
 ### 3. LSP (Language Server Protocol)
 
 - Neovim comes with built-in LSP support, enabling features like code suggestions, autocompletions, etc. The setup for this is [here](after/plugin/lsp.lua).
   - **Snippets:** With LSP and language servers installed using [mason](https://github.com/williamboman/mason.nvim), I also utilize [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) for autocompletion, whose setup is [here](after/plugin/cmp.lua).
 
+  ![alt text](5.png)
+
 ### 4. Telescope
 
 - Telescope makes navigation, file finding, and searching for keywords in entire projects very easy. The setup is [here](after/plugin/telescope.lua).
   - I've also used the [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) plugin for syntax highlighting and more.
 
+  ![alt text](image.png)
+
 ### 5. Discord RPC Integration
 
 - Additionally, I've integrated [nvimcord](https://github.com/ObserverOfTime/nvimcord) to enable Discord Rich Presence in Neovim. This feature enhances collaboration and showcases your activity to others on Discord.
 - To update your Discord Rich Presence, open and edit a file in Neovim, then press `Esc` to enter normal mode. Type `:nvimcordupdate`, then press `Tab` and `Enter` to update and display your Rich Presence on Discord.
+
+![alt text](1.png)
+
 ## Background
 
 - The background is removed by default. If you want to enjoy your Neovim with a background, simply comment out line 29 [here](lua/options.lua).
