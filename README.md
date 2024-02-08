@@ -1,106 +1,48 @@
 # Neovim Dot-files
 
-<br>
-<br>
+This repository contains my Neovim config files for both Linux and Windows-based environments. 
 
-- This repo has my neovim dotfiles for `linux` and `windows` based environments :smile:
+## Features
 
-<br>
-<br>
+### 1. Basic Options
 
-### Features
+- I have set basic options like `tabstop`, `relative number`, etc., which you can find [here](lua/options.lua).
+- This also includes fetching two color schemes: [catppuccin](https://github.com/catppuccin/nvim) and [material](https://github.com/kaicataldo/material.vim/).
 
-<br>
-<br>
+### 2. Lazy.nvim
 
-__1. Basic Options__
+- [`Lazy.nvim`](https://github.com/folke/lazy.nvim) is a new plugin manager for Neovim, replacing the now deprecated [`packer`](https://github.com/wbthomason/packer.nvim).
+- The setup file for this plugin is [here](lua/plugin.lua), and the list of plugins to be installed is mentioned [here](lua/pluginlist.lua).
 
-<br>
-  - I have set basic options like `tabstop`, `relative number`, etc that you can find [here](lua/options.lua)
+### 3. LSP (Language Server Protocol)
 
-  - this also fetches two colorschemes: [catppuccin](https://github.com/catppuccin/nvim) and [material](https://github.com/kaicataldo/material.vim/)
+- Neovim comes with built-in LSP support, enabling features like code suggestions, autocompletions, etc. The setup for this is [here](after/plugin/lsp.lua).
+  - **Snippets:** With LSP and language servers installed using [mason](https://github.com/williamboman/mason.nvim), I also utilize [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) for autocompletion, whose setup is [here](after/plugin/cmp.lua).
 
+### 4. Telescope
 
-<br>
-<br>
-<br>
-<br>
+- Telescope makes navigation, file finding, and searching for keywords in entire projects very easy. The setup is [here](after/plugin/telescope.lua).
+  - I've also used the [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) plugin for syntax highlighting and more.
 
-__2. Lazy.nvim__
+### 5. Discord RPC Integration
 
-<br>
-
-  - [`Lazy.nvim`](https://github.com/folke/lazy.nvim) is a new `plugin manager` for neovim although [`packer`](https://github.com/wbthomason/packer.nvim) was cool, it is depreciated now :smiling_face_with_tear:
-
-  - The setup file for this plugin is [here](lua/plugin.lua) and the plugins to be installed is mentioned [here](lua/pluginlist.lua).
-
-<br>
-<br>
-<br>
-<br>
-
-__3. LSP__
-
-<br>
-
-  - As we all know, neovim comes with built-in lsp support, we can pretty much fo everything vscode did... like code suggestions, autocompletions, etc. The setup for this is [here](after/plugin/lsp.lua).
-
-  __3.1 Snippets__
-  
-   - With LSP, and language servers intalled with [mason](https://github.com/williamboman/mason.nvim), which helps to install language servers, I also used [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) whose setup is [here](after/plugin/cmp.lua).
-
-<br>
-<br>
-<br>
-<br>
-
-__4. Telescope__
-
-<br>
-  - this helps to make navigation, file finding, searching for keywords in entire projects, very easy. [here's](after/plugin/telescope.lua) the setup.
- 
-  - also used [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) plugin for syntax highlighting and stuffz.
-
-<br>
-<br>
-<br>
-<br>
-
+- Additionally, I've integrated [nvimcord](https://github.com/ObserverOfTime/nvimcord) to enable Discord Rich Presence in Neovim. This feature enhances collaboration and showcases your activity to others on Discord.
+- To update your Discord Rich Presence, open and edit a file in Neovim, then press `Esc` to enter normal mode. Type `:nvimcordupdate`, then press `Tab` and `Enter` to update and display your Rich Presence on Discord.
 ## Background
 
-<br>
-<br>
-
-- The background is removed by default. If you want to enjoy your nvim with background, just comment the line 29 [here](lua/options.lua).
-
-<br>
-<br>
+- The background is removed by default. If you want to enjoy your Neovim with a background, simply comment out line 29 [here](lua/options.lua).
 
 ---
 
-<br>
-<br>
-<br>
-<br>
-
 ## Installation
 
-<br>
-<br>
+- Ensure you have Neovim `v0.8.0` or higher:
 
-
+  ```bash
+   nvim --version
 - Ensure you have `NVIM  > v0.8.0`
 
-<br>
-
-```bash
-nvim --version
-```
-
-<br>
-
 - Install `ripgrep`
-
 <br>
 
   1. Linux
@@ -110,7 +52,7 @@ nvim --version
      pacman -S ripgrep # Arch
      # Baki dekhlo apna apna
      ```
-<br>
+  <br>
 
   2. Windows
 
@@ -120,28 +62,22 @@ nvim --version
 
      or
 
-     [ripgrep](https://stackoverflow.com/questions/76666894/how-to-install-ripgrep-on-windows)
+     Refer this: [ripgrep](https://stackoverflow.com/questions/76666894/how-to-install-ripgrep-on-windows)
 
 <br>
 <br>
 
-- Make sure you have [node](https://nodejs.org/en) and [npm](https://www.npmjs.com/package/npm) installed
+- Make sure you have [node](https://nodejs.org/en) and [npm](https://www.npmjs.com/package/npm) installed.
 
 - ensure presence of [`git`](https://github.com/git-guides/install-git) in the cmd.
 
 
-- [git](https://git-scm.com/downloads) should be installed, 
-
+- [git](https://git-scm.com/downloads) should be installed.
 <br>
-<br>
-
 
 ### Linux
 
-
 <br>
-<br>
-
 1. Clone this repo in `.config/nvim`. Create it if not already there with `mkdir .config/nvim`.
 
 <br>
@@ -150,54 +86,33 @@ nvim --version
 cd ~/.config/nvim
 git clone  "https://github.com/hail0hydra/gardua_nvim_dotfs" .
 ```
-
-<br>
 <br>
 
  2. Run nvim
 
 <br>
-<br>
 
 ```bash
 nvim
 ```
-
 <br>
-<br>
-<br>
-<br>
-
 
 ### Windows
-
 <br>
-<br
 
-- Make sure there is [make](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows)
-
-- Make sure [gcc](https://gcc.gnu.org/install/binaries.html) is installed
-
+- Make sure you have [make](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows) and [gcc](https://gcc.gnu.org/install/binaries.html) installed.
 - ensure [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#windows) is installed as well
-
   ```
   scoop install gcc make fzf
   ```
 <br>
-<br>
-
 1. Navigate to `%USERPROFILE%\AppData\Local\` and ensure the presence of `nvim` directory (not to be confused with `nvim-data` directory).
-
 <br>
-<br>
-
  ```cmd
 cd "%USERPROFILE%\AppData\Local\"
 ```
 
 <br>
-<br>
-
 2. If `nvim` directory isn't there make it and navigate into it
 
 <br>
@@ -208,10 +123,6 @@ cd nvim
 ```
 
 <br>
-<br>
-
-
-
 3. Clone the github repo.
 
 <br>
@@ -220,8 +131,6 @@ cd nvim
 git clone "https://github.com/hail0hydra/gardua_nvim_dotfs" .
 ```
 <br>
-<br>
-
 4. Run nvim
 
 <br>
@@ -229,19 +138,10 @@ git clone "https://github.com/hail0hydra/gardua_nvim_dotfs" .
 ```cmd
 nvim
 ```
-
-<br>
-<br>
-
 ---
-
-<br>
-<br>
-<br>
 
 ## Bonus
 
-<br>
 <br>
 
 - To use [Markdown Preview](https://github.com/iamcco/markdown-preview.nvim) you can run `:call mkdp#util#install()` in any file just once.

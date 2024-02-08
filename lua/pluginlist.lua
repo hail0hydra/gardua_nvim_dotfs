@@ -96,4 +96,7 @@ return {
         main = "ibl",
         opts = {},
     },
+    {
+        "ObserverOfTime/nvimcord",
+    }
 }
