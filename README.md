@@ -1,6 +1,6 @@
 # Neovim Dot-files
 
-This repository contains my Neovim config files for both Linux and Windows-based environments. 
+This repository contains Neovim config files for both Linux and Windows-based environments. 
 
 ## Features
 
