@@ -118,13 +118,17 @@ nvim
   scoop install gcc make fzf
   ```
 <br>
+
 1. Navigate to `%USERPROFILE%\AppData\Local\` and ensure the presence of `nvim` directory (not to be confused with `nvim-data` directory).
+
 <br>
- ```cmd
+
+```cmd
 cd "%USERPROFILE%\AppData\Local\"
 ```
 
 <br>
+
 2. If `nvim` directory isn't there make it and navigate into it
 
 <br>
