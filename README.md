@@ -95,6 +95,7 @@ This repository contains Neovim config files for both Linux and Windows-based en
 <br>
 
 ```bash
+mkdir ~/.config/nvim
 cd ~/.config/nvim
 git clone  "https://github.com/hail0hydra/gardua_nvim_dotfs" .
 ```
