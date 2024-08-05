@@ -40,6 +40,14 @@ This repository contains Neovim config files for both Linux and Windows-based en
 
 ![alt text](Features/DiscordRPC.png)
 
+
+### 6. Markview Plugin
+
+- This [plugin](https://github.com/OXY2DEV/markview.nvim) helps to render markdown in terminal itself.
+- This helps to understand and take notes easily without opening browser for markdown_preview.
+
+![alt text](Features/markview.png)
+
 ## Background
 
 - The background is removed by default. If you want to enjoy your Neovim with a background, simply comment out line 29 [here](lua/options.lua).
@@ -115,7 +123,7 @@ nvim
 
 - Make sure you have [make](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows) and [gcc](https://gcc.gnu.org/install/binaries.html) installed.
 - ensure [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#windows) is installed as well
-  ```
+  ```cmd
   scoop install gcc make fzf
   ```
 <br>
@@ -158,6 +166,10 @@ nvim
 ---
 
 ## Bonus
+
+<br>
+
+- To use dicord presence as in vscode, just go [here](./after/plugin/discord.nvim) and uncomment the file. Make sure discord is on before opening nvim.
 
 <br>
 
