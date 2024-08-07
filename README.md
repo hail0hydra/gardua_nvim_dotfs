@@ -169,7 +169,7 @@ nvim
 
 <br>
 
-- To use dicord presence as in vscode, just go [here](./after/plugin/discord.nvim) and uncomment the file. Make sure discord is on before opening nvim.
+- To use dicord presence as in vscode, just go [here](./after/plugin/discord.lua) and uncomment the file. Make sure discord is on before opening nvim.
 
 <br>
 
