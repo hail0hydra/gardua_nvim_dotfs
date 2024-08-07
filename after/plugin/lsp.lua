@@ -96,7 +96,18 @@ require("mason-lspconfig").setup_handlers({
         }
     end,
 
+    ['marksman'] = function()
+        require'lspconfig'.marksman.setup{
+            on_attach = on_attach,
+            capabilities = capabilities,
+            cmd = { "marksman", "server" },
+            filetypes = { "markdown", "markdown.mdx" },
+            single_file_support = true,
+        }
+    end,
+
 })
+
 
 
 

@@ -22,7 +22,7 @@ return {
         name = 'material',
         priority = 1000,
         config = function ()
-            vim.cmd("colorscheme material")
+            -- vim.cmd("colorscheme material")
         end
     },
 

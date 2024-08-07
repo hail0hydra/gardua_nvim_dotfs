@@ -41,7 +41,7 @@ nnoremap <leader>yy "+yy
 -- set softtabstop=4
 -- local ft = vim.api.nvim_buf_get_option(0, 'filetype')
 -- if ft == 'vim' then
---     vim.cmd('colorscheme moonfly')
+vim.cmd('colorscheme retrobox')
 --     vim.cmd('highlight Normal guibg=none')
 -- end
 
