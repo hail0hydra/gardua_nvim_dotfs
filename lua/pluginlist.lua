@@ -9,7 +9,7 @@ return {
     },
 
     { -- colorscheme
-        "catppuccin/nvim", 
+        "catppuccin/nvim",
         name = "catppuccin",
         priority = 1000,
         -- config = function()
@@ -23,6 +23,25 @@ return {
         priority = 1000,
         config = function ()
             -- vim.cmd("colorscheme material")
+        end
+    },
+
+    {
+        'ayu-theme/ayu-vim',
+        name = 'ayu-vim',
+        priority = 1000,
+        config = function ()
+            vim.cmd("colorscheme ayu")
+        end
+    },
+
+    {
+        "bluz71/vim-moonfly-colors",
+        lazy = false,
+        name = 'moonfly',
+        priority = 1000,
+        config = function ()
+            -- vim.cmd("colorscheme ayu")
         end
     },
 
@@ -69,6 +88,8 @@ return {
         'nvim-telescope/telescope-fzf-native.nvim',
         build = 'make',
     },
+
+    {'xiyaowong/telescope-emoji.nvim'},
 
 
     -- treesitter

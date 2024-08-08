@@ -10,6 +10,7 @@ map('n','<leader>fc','<cmd>lua require("telescope.builtin").commands()<cr>',opts
 map('n','<leader>fb','<cmd>lua require("telescope.builtin").buffers()<cr>',opts) -- buffers
 
 
+
 map('n','<leader>gf','<cmd>lua require("telescope.builtin").git_files()<cr>',opts) -- git files
 --map('n','<leader>gb','<cmd>lua require("telescope.builtin").git_branches(require("telescope.themes").get_ivy())<cr>',opts) -- git branches
 map('n','<leader>gb','<cmd>lua require("telescope.builtin").git_branches(require("telescope.themes"))<cr>',opts) -- git branches
@@ -23,3 +24,5 @@ map('n','<leader>t','<cmd>NvimTreeToggle<cr>',opts)
 -- Markdonw Preview
 map('n','<F5>','<cmd>MarkdownPreview<cr>',opts)
 
+-- emoji
+map('n','<leader>fe','<cmd>Telescope emoji<cr>',opts) -- buffers

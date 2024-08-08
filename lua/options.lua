@@ -26,7 +26,16 @@ set winbar=%=%m\ %f
 
 
 " Making it transparent background
-autocmd BufEnter * highlight Normal guibg=none
+" autocmd BufEnter * highlight Normal guibg=none
+" autocmd BufEnter * highlight 
+autocmd BufEnter *.c colorscheme moonfly 
+autocmd BufEnter *.bin colorscheme wildcharm
+autocmd BufEnter *.hex colorscheme wildcharm
+
+" for hex | xxd
+au BufReadPost *.hex set ft=xxd
+au BufReadPost *.bin set ft=xxd
+
 
 " Copy & Paste From System Clipboard
 vnoremap <leader>y "+y
@@ -36,12 +45,12 @@ nnoremap <leader>yy "+yy
 ]])
 
 -- set autoindent
--- set background=dark
 -- " set smartindent
+-- set background=dark
 -- set softtabstop=4
 -- local ft = vim.api.nvim_buf_get_option(0, 'filetype')
 -- if ft == 'vim' then
-vim.cmd('colorscheme retrobox')
---     vim.cmd('highlight Normal guibg=none')
+-- vim.cmd('colorscheme PaperColor')
+    -- vim.cmd('highlight Normal guibg=none')
 -- end
 
