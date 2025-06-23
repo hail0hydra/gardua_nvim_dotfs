@@ -26,11 +26,16 @@ set winbar=%=%m\ %f
 
 
 " Making it transparent background
-" autocmd BufEnter * highlight Normal guibg=none
+" autocmd BufEnter * highlight Normal guibg=none ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 " autocmd BufEnter * highlight 
 autocmd BufEnter *.c colorscheme moonfly 
+" autocmd BufEnter *.md colorscheme moonfly
 autocmd BufEnter *.bin colorscheme wildcharm
 autocmd BufEnter *.hex colorscheme wildcharm
+autocmd BufEnter *.sh colorscheme moonfly
+
+autocmd BufEnter * highlight Normal guibg=none ctermbg=NONE
 
 " for hex | xxd
 au BufReadPost *.hex set ft=xxd

@@ -1,3 +1,6 @@
+-- for assembly
+vim.treesitter.language.register('nasm', 'asm') 
+
 local on_attach = function(_, bufnr)
 
 
@@ -75,8 +78,8 @@ require("mason-lspconfig").setup_handlers({
         }
     end,
 
-    ['tsserver'] = function ()
-        require('lspconfig').tsserver.setup {
+    ['ts_ls'] = function ()
+        require('lspconfig').ts_ls.setup {
             on_attach = on_attach,
             capabilities = capabilities,
             cmd = {'typescript-language-server', "--stdio"},
@@ -97,12 +100,54 @@ require("mason-lspconfig").setup_handlers({
     end,
 
     ['marksman'] = function()
-        require'lspconfig'.marksman.setup{
+        require('lspconfig').marksman.setup{
             on_attach = on_attach,
             capabilities = capabilities,
             cmd = { "marksman", "server" },
             filetypes = { "markdown", "markdown.mdx" },
+            root_dir = require("lspconfig.util").root_pattern(
+          ".git", ".marksman.toml", "README.md", "*.md"
+            ),
             single_file_support = true,
+        }
+    end,
+
+    ['vimls'] = function()
+        require('lspconfig').vimls.setup{
+            on_attach = on_attach,
+            capabilities = capabilities,
+            cmd = { "vim-language-server", "--stdio" },
+            filetypes = { "vim" },
+            init_options = {
+                diagnostic = {
+                    enable = true
+                },
+                indexes = {
+                    count = 3,
+                    gap = 100,
+                    projectRootPatterns = { "runtime", "nvim", ".git", "autoload", "plugin" },
+                    runtimepath = true
+                },
+                isNeovim = true,
+                iskeyword = "@,48-57,_,192-255,-#",
+                runtimepath = "",
+                suggest = {
+                    fromRuntimepath = true,
+                    fromVimruntime = true
+                },
+                vimruntime = ""
+            },
+            single_file_support = true,
+        }
+    end,
+
+    ['asm_lsp'] = function()
+        require("lspconfig").asm_lsp.setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            cmd = { "asm-lsp" },  -- mason makes it globally available
+            filetypes = { "asm", "nasm" },
+            root_dir = require("lspconfig.util").root_pattern(".git", "*.asm"),
         }
     end,
 
@@ -111,3 +156,11 @@ require("mason-lspconfig").setup_handlers({
 
 
 
+
+
+-- for registering asm as nasm filetype
+vim.filetype.add({
+  extension = {
+    asm = "asm",
+  }
+})

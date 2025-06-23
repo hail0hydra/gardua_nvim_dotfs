@@ -2,7 +2,7 @@ local opts = {noremap=true, silent=true}
 local map = vim.api.nvim_set_keymap
 
 
-map('n','<c-_>','<cmd>lua require("telescope.builtin").current_buffer_fuzzy_find()<cr>',opts) -- current buffer
+map('n','<c-/>','<cmd>lua require("telescope.builtin").current_buffer_fuzzy_find()<cr>',opts) -- current buffer
 map('n','<leader>ff','<cmd>lua require("telescope.builtin").find_files()<cr>',opts) -- find files
 map('n','<leader>fg','<cmd>lua require("telescope.builtin").live_grep()<cr>',opts) -- live grep
 map('n','<leader>fh','<cmd>lua require("telescope.builtin").help_tags()<cr>',opts) -- help tags
@@ -25,4 +25,10 @@ map('n','<leader>t','<cmd>NvimTreeToggle<cr>',opts)
 map('n','<F5>','<cmd>MarkdownPreview<cr>',opts)
 
 -- emoji
-map('n','<leader>fe','<cmd>Telescope emoji<cr>',opts) -- buffers
+map('n','<leader>fe','<cmd>Telescope emoji<cr>',opts)
+
+-- copy paste
+map("v", "<leader>y", '"+y', opts)
+
+-- see all notifications
+vim.keymap.set("n", "<leader>fn", "<cmd>Telescope notify<cr>", { noremap = true, silent = true })

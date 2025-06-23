@@ -45,6 +45,14 @@ return {
         end
     },
 
+    { "ellisonleao/gruvbox.nvim",
+        priority = 1000,
+        name="gruvbox",
+        config = function ()
+            -- vim.cmd("colorscheme ayu")
+        end
+    },
+
     { -- lualine
         'nvim-lualine/lualine.nvim',
         dependencies = {
@@ -123,11 +131,15 @@ return {
 
     -- markdown
     {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function() vim.fn["mkdp#util#install"]() end,
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      build = "cd app && yarn install",
+      init = function()
+        vim.g.mkdp_filetypes = { "markdown" }
+      end,
+      ft = { "markdown" },
     },
+    
     {
         "OXY2DEV/markview.nvim",
         lazy = false,      -- Recommended
@@ -141,6 +153,12 @@ return {
 
             "nvim-tree/nvim-web-devicons"
         }
-    }
+    },
+
+    -- notification
+    {
+        'rcarriga/nvim-notify',
+    },
+
 
 }

@@ -48,6 +48,20 @@ This repository contains Neovim config files for both Linux and Windows-based en
 
 ![alt text](Features/markview.png)
 
+
+### 7. Notes and Notification
+
+- Some custom files have been added to `after/plugin` that help in linking and taking notes easily.
+
+- [keymaps.lua](./after/plugin/keymaps.lua) has been updated accordinly along with one more file being added.
+
+- Notification features added using [notify.nvim](https://github.com/rcarriga/nvim-notify)
+
+
+<br>
+<br>
+<br>
+
 ## Background
 
 - The background is removed by default. If you want to enjoy your Neovim with a background, simply comment out line 29 [here](lua/options.lua).
@@ -62,19 +76,22 @@ This repository contains Neovim config files for both Linux and Windows-based en
    nvim --version
 - Ensure you have `NVIM  > v0.8.0`
 
-- Install `ripgrep`
+- Install `ripgrep` and `yarn`
 <br>
 
-  1. Linux
+  - Linux
 
      ```bash
-     apt install ripgrep # debian based
-     pacman -S ripgrep # Arch
+     apt install ripgrep  # debian based
+     pacman -S ripgrep    # Arch
+
+
      # Baki dekhlo apna apna
+
      ```
   <br>
 
-  2. Windows
+  - Windows
 
      ```cmd
      scoop install ripgrep
@@ -83,6 +100,16 @@ This repository contains Neovim config files for both Linux and Windows-based en
      or
 
      Refer this: [ripgrep](https://stackoverflow.com/questions/76666894/how-to-install-ripgrep-on-windows)
+
+     <br>
+
+     - Common
+
+     ```bash
+
+     npm i yarn -g #universal
+
+     ```
 
 <br>
 <br>
