@@ -18,6 +18,15 @@ return {
     },
 
     {
+        "rebelot/kanagawa.nvim",
+        name = "kanagawa",
+        priority = 1000,
+        config = function()
+            vim.cmd("colorscheme kanagawa-wave")
+        end
+    },
+
+    {
         'kaicataldo/material.vim',
         name = 'material',
         priority = 1000,
@@ -41,7 +50,7 @@ return {
         name = 'moonfly',
         priority = 1000,
         config = function ()
-            vim.cmd("colorscheme moonfly")
+            -- vim.cmd("colorscheme moonfly")
         end
     },
 
@@ -219,8 +228,18 @@ return {
         },
     },
 
+    -- copilot
     {
         "github/copilot.vim"
+    },
+
+
+    -- bufferline
+    {
+        'akinsho/bufferline.nvim', version = "*",
+        config = function()
+            require("bufferline").setup{}
+        end
     },
 
 }

@@ -21,7 +21,6 @@ set.termguicolors = true
 set.mouse = 'a'
 
 
-
 vim.cmd([[
 set winbar=%=%m\ %f
 
