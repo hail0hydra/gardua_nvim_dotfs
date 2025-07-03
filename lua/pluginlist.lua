@@ -103,6 +103,7 @@ return {
     -- treesitter
     {
         'nvim-treesitter/nvim-treesitter',
+        priority = 500,
         build = ':TSUpdate',
     },
 
@@ -131,34 +132,91 @@ return {
 
     -- markdown
     {
-      "iamcco/markdown-preview.nvim",
-      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-      build = "cd app && yarn install",
-      init = function()
-        vim.g.mkdp_filetypes = { "markdown" }
-      end,
-      ft = { "markdown" },
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        build = "cd app && yarn install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" },
     },
-    
+
     {
-        "OXY2DEV/markview.nvim",
-        lazy = false,      -- Recommended
-        -- ft = "markdown" -- If you decide to lazy-load anyway
-
-        dependencies = {
-            -- You will not need this if you installed the
-            -- parsers manually
-            -- Or if the parsers are in your $RUNTIMEPATH
-            "nvim-treesitter/nvim-treesitter",
-
-            "nvim-tree/nvim-web-devicons"
-        }
+        'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+        ---@module 'render-markdown'
+        ---@type render.md.UserConfig
+        opts = {},
     },
 
+    -- {
+    --     "OXY2DEV/markview.nvim",
+    --     lazy = false,      -- Recommended
+    --     -- ft = "markdown" -- If you decide to lazy-load anyway
+    --
+    --     priority = 1001,
+    --     dependencies = {
+    --         -- You will not need this if you installed the
+    --         -- parsers manually
+    --         -- Or if the parsers are in your $RUNTIMEPATH
+    --         -- "nvim-treesitter/nvim-treesitter",
+    --
+    --         "nvim-tree/nvim-web-devicons"
+    --     }
+    -- },
+    --
     -- notification
     {
         'rcarriga/nvim-notify',
     },
 
+    {
+        "folke/noice.nvim",
+        dependencies = { "MunifTanjim/nui.nvim" },
+        opts = {
+            lsp = {
+                override = {
+                    ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+                    ["vim.lsp.util.stylize_markdown"] = true,
+                    ["cmp.entry.get_documentation"] = true,
+                },
+            },
+            presets = {
+                long_message_to_split = false,
+            },
+            views = {
+                cmdline_popup = {
+                    position = {
+                        row = 5,
+                        col = "50%",
+                    },
+                    size = {
+                        width = 60,
+                        height = "auto",
+                    },
+                },
+                popupmenu = {
+                    relative = "editor",
+                    position = {
+                        row = 8,
+                        col = "50%",
+                    },
+                    size = {
+                        width = 60,
+                        height = 10,
+                    },
+                    border = {
+                        style = "single",
+                        padding = { 0, 1 },
+                    },
+                    win_options = {
+                        winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+                    },
+                },
+            },
+        },
+    },
 
 }

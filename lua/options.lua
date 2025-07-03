@@ -30,6 +30,7 @@ set winbar=%=%m\ %f
 " hi Normal guibg=NONE ctermbg=NONE
 " autocmd BufEnter * highlight 
 autocmd BufEnter *.c colorscheme moonfly 
+autocmd BufEnter *.cc colorscheme moonfly 
 " autocmd BufEnter *.md colorscheme moonfly
 autocmd BufEnter *.bin colorscheme wildcharm
 autocmd BufEnter *.hex colorscheme wildcharm
@@ -59,3 +60,8 @@ nnoremap <leader>yy "+yy
     -- vim.cmd('highlight Normal guibg=none')
 -- end
 
+vim.g.markview_config = {
+  experimental = {
+    check_rtp = false, -- completely disable the check (not just hide the message)
+  }
+}
