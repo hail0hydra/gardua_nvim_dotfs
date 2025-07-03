@@ -31,7 +31,7 @@ return {
         name = 'ayu-vim',
         priority = 1000,
         config = function ()
-            vim.cmd("colorscheme ayu")
+            -- vim.cmd("colorscheme ayu")
         end
     },
 
@@ -41,7 +41,7 @@ return {
         name = 'moonfly',
         priority = 1000,
         config = function ()
-            -- vim.cmd("colorscheme ayu")
+            vim.cmd("colorscheme moonfly")
         end
     },
 
@@ -217,6 +217,10 @@ return {
                 },
             },
         },
+    },
+
+    {
+        "github/copilot.vim"
     },
 
 }

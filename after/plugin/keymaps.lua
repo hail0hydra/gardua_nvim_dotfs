@@ -32,3 +32,16 @@ map("v", "<leader>y", '"+y', opts)
 
 -- see all notifications
 vim.keymap.set("n", "<leader>fn", "<cmd>Telescope notify<cr>", { noremap = true, silent = true })
+
+
+-- turn off copilot
+map('n','<F12>','<cmd>Copilot disable<cr>',opts) -- disable copilot
+map('i','<F12>','<cmd>Copilot disable<cr>',opts) -- disable copilot in insert mode
+
+
+
+-- turn on copilot
+map('n','<F10>','<cmd>Copilot enable<cr>',opts) -- enable copilot
+map('i','<F10>','<cmd>Copilot enable<cr>',opts) -- enable copilot in insert mode
+
+
