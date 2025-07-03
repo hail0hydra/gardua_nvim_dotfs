@@ -1,6 +1,10 @@
 -- Register Treesitter lang for asm
 vim.treesitter.language.register('nasm', 'asm')
 
+
+-- diagnostics
+vim.diagnostic.config({ virtual_text = true })
+
 -- on_attach function
 local on_attach = function(_, bufnr)
   local bufmap = function(keys, func)
