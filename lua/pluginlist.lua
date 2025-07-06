@@ -18,11 +18,24 @@ return {
     },
 
     {
+        "navarasu/onedark.nvim",
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function()
+            require('onedark').setup {
+                style = 'deep',
+                transparent=true;
+            }
+            -- Enable theme
+            require('onedark').load()
+        end
+    },
+
+    {
         "rebelot/kanagawa.nvim",
         name = "kanagawa",
         priority = 1000,
         config = function()
-            vim.cmd("colorscheme kanagawa-wave")
+            -- vim.cmd("colorscheme kanagawa-wave")
         end
     },
 
@@ -229,17 +242,24 @@ return {
     },
 
     -- copilot
-    {
-        "github/copilot.vim"
-    },
+    -- {
+    --     "github/copilot.vim"
+    -- },
 
 
     -- bufferline
-    {
-        'akinsho/bufferline.nvim', version = "*",
-        config = function()
-            require("bufferline").setup{}
-        end
-    },
+    -- {
+    --     'akinsho/bufferline.nvim', version = "*",
+    --     config = function()
+    --         require("bufferline").setup{}
+    --     end
+    -- },
 
+    -- tabline, not bufferline
+    {
+        'nanozuki/tabby.nvim',
+        config = function()
+            -- configs...
+        end,
+    }
 }
