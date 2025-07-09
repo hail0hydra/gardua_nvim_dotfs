@@ -8,7 +8,7 @@ map('n','<leader>fg','<cmd>lua require("telescope.builtin").live_grep()<cr>',opt
 map('n','<leader>fh','<cmd>lua require("telescope.builtin").help_tags()<cr>',opts) -- help tags
 map('n','<leader>fc','<cmd>lua require("telescope.builtin").commands()<cr>',opts) -- commands
 map('n','<leader>fb','<cmd>lua require("telescope.builtin").buffers()<cr>',opts) -- buffers
-
+map('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 
 
 map('n','<leader>gf','<cmd>lua require("telescope.builtin").git_files()<cr>',opts) -- git files

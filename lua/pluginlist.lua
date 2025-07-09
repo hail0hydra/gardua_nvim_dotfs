@@ -261,5 +261,6 @@ return {
         config = function()
             -- configs...
         end,
-    }
+    },
+
 }

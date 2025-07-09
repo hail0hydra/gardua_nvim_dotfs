@@ -41,10 +41,15 @@ This repository contains Neovim config files for both Linux and Windows-based en
 ![alt text](Features/DiscordRPC.png)
 
 
-### 6. Markview Plugin
+### 6. Markview Plugin (discontinued...)
 
-- This [plugin](https://github.com/OXY2DEV/markview.nvim) helps to render markdown in terminal itself.
-- This helps to understand and take notes easily without opening browser for markdown_preview.
+>
+>- This [plugin](https://github.com/OXY2DEV/markview.nvim) helps to render markdown in terminal itself.
+>- This helps to understand and take notes easily without opening browser for markdown_preview.
+>
+
+- Using [this](https://github.com/MeanderingProgrammer/render-markdown.nvim) for markdown rendering.
+
 
 ![alt text](Features/markview.png)
 
@@ -190,6 +195,27 @@ git clone "https://github.com/hail0hydra/gardua_nvim_dotfs" .
 ```cmd
 nvim
 ```
+
+<br>
+<br>
+<br>
+
+### Mac
+
+<br>
+
+- being a UNIX based environment, if you follow the same steps in Linux Installation, you can get the neovim config working for you. (tested on my friend's system).
+
+- You can use `brew` or any other package manager to install all the dependencies like _node_, _yarn_, _npm_, etc.
+
+<br>
+<br>
+
+>- __TLDR__:  Just follow Linux steps
+
+<br>
+<br>
+
 ---
 
 ## Bonus

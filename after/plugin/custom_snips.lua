@@ -13,7 +13,8 @@ ls.add_snippets("cpp",{
     --     }
     --     ]], {i(0)}
     -- )),
-    s("in", t({"#include <bits/stdc++.h>", "using namespace std;", "int main(){", "    ios_base::sync_with_stdio(false);", "    cin.tie(nullptr);", "    return 0;", "}"})),
+    s("in", t({"#include <iostream>", "using namespace std;", "int main(){", "    return 0;", "}"})),
+    s("cp", t({"#include <bits/stdc++.h>", "using namespace std;", "int main(){", "    ios_base::sync_with_stdio(false);", "    cin.tie(nullptr);", "    return 0;", "}"})),
 })
 
 -- "watch : https://www.youtube.com/watch?v=FmHhonPjvvA"
