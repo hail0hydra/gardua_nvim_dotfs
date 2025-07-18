@@ -43,6 +43,9 @@ autocmd BufEnter * highlight Normal guibg=none ctermbg=NONE
 au BufReadPost *.hex set ft=xxd
 au BufReadPost *.bin set ft=xxd
 
+" cursor on windows :)
+:au VimLeave * set guicursor= | call chansend(v:stderr, "\x1b[ q")
+
 
 " For colorschemes that mess-up in guibg=None
 " autocmd BufEnter * highlight EndOfBuffer guibg=None ctermbg=NONE
