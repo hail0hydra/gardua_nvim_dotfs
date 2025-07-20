@@ -1,7 +1,7 @@
 local opts = {noremap=true, silent=true}
 local map = vim.api.nvim_set_keymap
-
-
+--
+--
 map('n','<c-/>','<cmd>lua require("telescope.builtin").current_buffer_fuzzy_find()<cr>',opts) -- current buffer
 
 -- for windows uncomment this line
@@ -47,5 +47,3 @@ map('i','<F12>','<cmd>Copilot disable<cr>',opts) -- disable copilot in insert mo
 -- turn on copilot
 map('n','<F10>','<cmd>Copilot enable<cr>',opts) -- enable copilot
 map('i','<F10>','<cmd>Copilot enable<cr>',opts) -- enable copilot in insert mode
-
-

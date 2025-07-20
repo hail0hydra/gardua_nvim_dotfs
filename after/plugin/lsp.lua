@@ -5,6 +5,17 @@ vim.treesitter.language.register('nasm', 'asm')
 -- diagnostics
 vim.diagnostic.config({ virtual_text = true })
 
+
+local diagnostics_active = true
+
+vim.keymap.set("n", "<leader>dq", function()
+  diagnostics_active = not diagnostics_active
+  vim.diagnostic.config({ virtual_text = diagnostics_active })
+  print("Diagnostics virtual_text: " .. (diagnostics_active and "ON" or "OFF"))
+end, { desc = "Toggle diagnostics virtual text" })
+
+
+
 -- on_attach function
 local on_attach = function(_, bufnr)
   local bufmap = function(keys, func)

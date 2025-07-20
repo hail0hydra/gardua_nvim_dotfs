@@ -58,7 +58,8 @@ end
 vim.keymap.set('n', '<F6>', function()
   local filename = vim.fn.expand('%')
   local outfile = vim.fn.expand('%:r') .. '.pdf'
-  local cmd = 'pandoc ' .. filename .. ' -o ' .. outfile .. ' --pdf-engine=tectonic'
+  local cmd = 'pandoc ' .. filename .. ' -o ' .. outfile  .. ' --pdf-engine=pdflatex'
+  -- local cmd = 'pandoc ' .. filename .. ' -o ' .. outfile  .. ' --pdf-engine=tectonic' -- use this on windows
 
   vim.fn.jobstart(cmd, {
     on_exit = function(_, code)
